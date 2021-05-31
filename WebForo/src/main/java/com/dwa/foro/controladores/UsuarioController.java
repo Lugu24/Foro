@@ -29,7 +29,7 @@ public class UsuarioController {
 			@RequestParam("password") String clave,
 			Model modelo, HttpSession sesion) {
 		
-		return "redirect:temas/listar";
+		return "redirect:/temas/listar";
 		//boolean res = servicioUsuario.validar(correoe, clave,sesion);
 		//if(res) {
 		//	return "redirect:/temas/listar";
