@@ -29,7 +29,7 @@ public class UsuarioController {
 			@RequestParam("password") String clave,
 			Model modelo, HttpSession sesion) {
 		
-		return "redirect:/temas/listar";
+		return "redirect:temas/listar";
 		//boolean res = servicioUsuario.validar(correoe, clave,sesion);
 		//if(res) {
 		//	return "redirect:/temas/listar";
@@ -54,7 +54,7 @@ public class UsuarioController {
 			return "redirect:/temas/listar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
-		return "/usuario/agregar";
+		return "usuario/agregar";
 	}
 	@GetMapping("/usuario/salir")
 	public String salir(HttpSession sesion) {

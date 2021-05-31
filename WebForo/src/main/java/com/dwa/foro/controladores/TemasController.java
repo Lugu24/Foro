@@ -56,7 +56,7 @@ public class TemasController {
 			if(!servicioTema.agregar(tema));
 				modelo.addAttribute("error", servicioTema.getMensaje());
 		}
-		return "redirect:/temas/listar";
+		return "redirect:temas/listar";
 	}
 	
 	@GetMapping("/temas/detalles")
@@ -110,7 +110,7 @@ public class TemasController {
 		if(!servicioReplica.agregar(replica)) {
 			modelo.addAttribute("error", servicioReplica.getMensaje());	}	
 		}
-		return "redirect:/temas/detalles/"+ replica.getTema().getId();
+		return "redirect:temas/detalles/"+ replica.getTema().getId();
 		
 	}
 	
