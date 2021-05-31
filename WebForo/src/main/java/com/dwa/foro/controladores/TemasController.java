@@ -27,7 +27,7 @@ public class TemasController {
 	@Autowired
 	ServicioReplica servicioReplica;
 	
-	@GetMapping("/temas/listar")
+	@GetMapping(path = {"/temas/listar"})
 	public String listar(Model modelo) {
 		Iterable<Tema> temas = servicioTema.verTodos();
 		
